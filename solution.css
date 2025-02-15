@@ -1,0 +1,15 @@
+A more robust approach uses `flex-grow` and a small margin to ensure consistent spacing:
+
+```css
+div {
+  display: flex;
+  justify-content: space-between;
+}
+div > * {
+  width: 100px;
+  flex-grow: 1;
+  margin: 0 10px; /* Adjust margin as needed */
+}
+```
+
+This solution involves assigning a `flex-grow` property of 1 to each child. Then, `justify-content: space-between` evenly distributes the space between the items. To add a small margin (10px in this case), this code avoids overlapping elements. Adjust the margin as needed.
