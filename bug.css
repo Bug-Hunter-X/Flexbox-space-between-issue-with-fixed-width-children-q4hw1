@@ -1,0 +1,13 @@
+The following CSS code results in unexpected behavior in some browsers:
+
+```css
+div {
+  display: flex;
+  justify-content: space-between;
+}
+div > * {
+  width: 100px;
+}
+```
+
+The intention is to have three 100px wide items evenly spaced within a flex container.  However, depending on the browser and the total width, the items might not be evenly spaced or might overlap due to the calculation of space between.
